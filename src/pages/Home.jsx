@@ -80,8 +80,8 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans">
-  {/* Hero Section */}
-  <div className="pt-32 bg-gradient-to-b from-[#1E3A5F]/10 to-white overflow-hidden relative">
+      {/* Hero Section */}
+      <div className="pt-32 bg-gradient-to-b from-[#1E3A5F]/10 to-white overflow-hidden relative">
         {/* Hero Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/80 to-transparent z-10"></div>
@@ -92,7 +92,7 @@ const Home = () => {
           />
         </div>
 
-  <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
+        <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -149,6 +149,73 @@ const Home = () => {
         </div>
       </div>
 
+
+      {/* Our Achievements Section */}
+      <motion.div
+        className="py-16 px-16"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold text-[#1E3A5F] text-center mb-12">Our Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Countries */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-all duration-300 group hover:translate-y-[-5px]"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#1E3A5F]/10 mb-4 group-hover:bg-[#E85B2C]/10 transition-colors duration-300">
+              <svg className="w-10 h-10 text-[#1E3A5F] group-hover:text-[#E85B2C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <p className="text-4xl font-bold text-[#1E3A5F] mb-2">9+</p>
+            <p className="text-[#6B7280] text-lg">Countries</p>
+          </motion.div>
+
+          {/* Happy Customers */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-all duration-300 group hover:translate-y-[-5px]"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#1E3A5F]/10 mb-4 group-hover:bg-[#E85B2C]/10 transition-colors duration-300">
+              <svg className="w-10 h-10 text-[#1E3A5F] group-hover:text-[#E85B2C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <p className="text-4xl font-bold text-[#1E3A5F] mb-2">11+</p>
+            <p className="text-[#6B7280] text-lg">Happy Customers</p>
+          </motion.div>
+
+          {/* Product Portfolio */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-all duration-300 group hover:translate-y-[-5px]"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#1E3A5F]/10 mb-4 transition-colors duration-300">
+              <svg className="w-10 h-10 transition-all duration-300" viewBox="0 0 109 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0 C35.97 0 71.94 0 109 0 C109 37.95 109 75.9 109 115 C73.03 115 37.06 115 0 115 C0 77.05 0 39.1 0 0 Z" />
+                <path d="M0 0 C0.81436868 1.76997474 1.6264294 3.54101152 2.4375 5.3125 C2.88996094 6.29863281 3.34242187 7.28476562 3.80859375 8.30078125 C7.49178059 16.64531276 7.66037762 28.94690391 4.375 37.5625 C3.63507712 39.06821719 2.84306324 40.54951232 2 42 C1.56429687 42.77601562 1.12859375 43.55203125 0.6796875 44.3515625 C-5.03916314 53.69547694 -13.632702 60.84997416 -24.38671875 63.61328125 C-34.84833974 65.1614135 -45.45163568 64.65044856 -54.3046875 58.36328125 C-54.86414063 57.91339844 -55.42359375 57.46351562 -56 57 C-55.70561329 51.54365074 -52.52301077 49.02191103 -48.8046875 45.44921875 C-48.17901886 44.83158157 -47.55335022 44.2139444 -46.90872192 43.57759094 C-44.90672429 41.60454801 -42.89161921 39.64558619 -40.875 37.6875 C-38.24324906 35.11228061 -35.61684307 32.53166766 -32.9921875 29.94921875 C-32.36172012 29.33029755 -31.73125275 28.71137634 -31.0816803 28.07369995 C-27.39303584 24.43505695 -23.8648486 20.72742587 -20.51757812 16.76879883 C-17.60044479 13.36876166 -14.45513194 10.19019952 -11.3125 7 C-10.66216797 6.32066406 -10.01183594 5.64132813 -9.34179688 4.94140625 C-8.70951172 4.30074219 -8.07722656 3.66007812 -7.42578125 3 C-6.86286377 2.4225 -6.29994629 1.845 -5.7199707 1.25 C-4 0 -4 0 0 0 Z" fill="#1e3a5f" className="group-hover:fill-[#E85B2C]" transform="translate(86,36)" />
+                <path d="M0 0 C0.75571289 -0.01385742 1.51142578 -0.02771484 2.29003906 -0.04199219 C9.29844412 0.01592852 16.39899802 1.87496714 21.9375 6.375 C22.33422852 8.67651367 22.33422852 8.67651367 21.9375 11.375 C20.12084961 13.7434082 20.12084961 13.7434082 17.58984375 16.17578125 C16.67396484 17.07103516 15.75808594 17.96628906 14.81445312 18.88867188 C13.83520586 19.82221332 12.85538448 20.7551529 11.875 21.6875 C9.98597591 23.51454654 8.09921489 25.34393614 6.21484375 27.17578125 C4.84102539 28.50996094 4.84102539 28.50996094 3.43945312 29.87109375 C0.75359454 32.55904902 -1.71178313 35.36593195 -4.17456055 38.25561523 C-8.36842224 42.96360869 -12.94990612 47.32366025 -17.4375 51.75 C-19.42735621 53.71326571 -21.41385935 55.67983831 -23.3984375 57.6484375 C-24.27032715 58.50872559 -25.1422168 59.36901367 -26.04052734 60.25537109 C-28.10139569 62.20797741 -28.10139569 62.20797741 -29.0625 64.375 C-30.3825 64.375 -31.7025 64.375 -33.0625 64.375 C-39.76153366 51.90093733 -41.9004852 41.16081995 -38.1015625 27.33203125 C-34.24657939 16.36127105 -26.59747785 7.81471942 -16.3203125 2.46875 C-10.9918992 0.22957242 -5.69925983 0.06273136 0 0 Z" fill="#1e3a5f" className="group-hover:fill-[#E85B2C]" transform="translate(55.0625,20.625)" />
+              </svg>
+            </div>
+            <p className="text-4xl font-bold text-[#1E3A5F] mb-2">300+</p>
+            <p className="text-[#6B7280] text-lg">Product Portfolio</p>
+          </motion.div>
+        </div>
+      </motion.div>
+
       {/* About Preview Section */}
       <section className="py-16 bg-[#F9FAFB]">
         <div className="container mx-auto px-4">
@@ -167,8 +234,12 @@ const Home = () => {
                 At <b>JAINOVA LIFESCIENCES PVT LTD</b>, we are proud to be a trusted global exporter of high-quality pharmaceutical products. We began our journey in the pharmaceutical industry in <span className="font-bold">2013</span>. Through our strategic partnerships and collaborations, including our sister company, <b>VISHWA REMEDIES</b>, we have been able to expand our reach and deliver high-quality pharmaceutical products worldwide.
               </p>
 
-              <p className="text-[#6B7280] mb-8">
+              <p className="text-[#6B7280] mb-6">
                 Our state-of-the-art facilities and expert team of scientists and healthcare professionals work tirelessly to meet the highest standards of pharmaceutical excellence.
+              </p>
+
+              <p className="text-[#6B7280] mb-8">
+                We strongly believe to provide Affordable Quality of Medicines across the World regardless of Geographic or Social Economic Barriers.
               </p>
               <Link
                 to="/about"
@@ -185,13 +256,50 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:w-1/2 h-80 bg-gray-200 rounded-lg overflow-hidden shadow-lg"
+              className="md:w-1/2"
             >
-              {/* Placeholder for lab/pharma facility image */}
-              <div className="w-full h-full bg-gradient-to-br from-[#1E3A5F]/20 to-[#E85B2C]/10 flex items-center justify-center">
+              {/* Pharmaceutical Laboratory Image */}
+              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-[350px] md:h-[350px]">
                 <img src="/images/pioneering_image.jpg" alt="Modern Pharmaceutical Laboratory" className="object-cover w-full h-full" />
-                {/* <span className="text-4xl">🧪🔬🧫</span>
-                <p className="text-[#6B7280] text-center absolute bottom-4">Modern Pharmaceutical Laboratory</p> */}
+              </div>
+              
+              {/* Three Points with Green Checks */}
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="relative flex-shrink-0">
+                    <div className="absolute inset-0 w-6 h-6 rounded-full bg-green-300 blur-md opacity-60"></div>
+                    <div className="relative w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <span className="text-[#1E3A5F] font-semibold text-sm">Experience over the years</span>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <div className="relative flex-shrink-0">
+                    <div className="absolute inset-0 w-6 h-6 rounded-full bg-green-300 blur-md opacity-60"></div>
+                    <div className="relative w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <span className="text-[#1E3A5F] font-semibold text-sm">Trust of Customers & Associates</span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="relative flex-shrink-0">
+                    <div className="absolute inset-0 w-6 h-6 rounded-full bg-green-300 blur-md opacity-60"></div>
+                    <div className="relative w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <span className="text-[#1E3A5F] font-semibold text-sm">Domain Expertise</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -199,7 +307,7 @@ const Home = () => {
       </section>
 
       {/* Products/Services Overview */}
-      <section className="py-8 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#1E3A5F] mb-4">
