@@ -287,7 +287,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:w-1/2"
+              className="md:w-[60%]"
             >
               <h2 className="text-3xl font-bold text-[#1E3A5F] mb-4">
                 Pioneering Excellence in Pharmaceutical Solutions
@@ -362,7 +362,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:w-1/2"
+              className="md:w-[40%]"
             >
               {/* Pharmaceutical Laboratory Image */}
               <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-[300px] md:h-[300px]">
