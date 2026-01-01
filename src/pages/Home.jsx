@@ -25,7 +25,7 @@ const Home = () => {
       description: "Tablets, capsules, and other solid dosage forms for oral administration.",
       icon: <img src="/icons/solid-oral.png" alt="Solid Oral Icon" className="mx-auto" style={{ width: '3rem', height: '3rem' }} />,
       productId: "solid-oral",
-      categories: ["Tablets", "Capsules", "Chewable Forms"],
+      categories: ["Tablets", "Capsules", "Chewable Forms", "Extended Release"],
     },
   ];
 
@@ -143,14 +143,17 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
-      <div className="pt-32 bg-gradient-to-b from-[#1E3A5F]/10 to-white overflow-hidden relative">
+      <div className="pt-32 bg-gradient-to-b from-[#1E3A5F]/10 to-white overflow-hidden relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[110vh]">
         {/* Hero Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/80 to-transparent z-10"></div>
-          <img
-            src="/images/home-page-hero.jpg"
+          <video
+            src="/images/hero-section-vid.mp4"
             alt="Jainova Lifesciences Pharmaceutical Research"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
+            autoPlay
+            loop
+            muted
           />
         </div>
 
@@ -162,22 +165,24 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="text-left md:col-span-8 lg:col-span-7"
             >
-              <motion.h2
+              <motion.h3
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                style={{lineHeight:'1.3'}}
+                className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight"
               >
-                Global Excellence in Pharmaceutical Products
-              </motion.h2>
-              <motion.p
+                {/* Global Excellence in Pharmaceutical Products */}
+                Delivering Safe and Effective Pharmaceutical Medicines Worldwide
+              </motion.h3>
+              {/* <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-white/90 mb-8 max-w-3xl"
               >
                 Delivering Safe and Effective Pharmaceutical Medicines Worldwide
-              </motion.p>
+              </motion.p> */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -190,12 +195,12 @@ const Home = () => {
                 >
                   Explore Products
                 </Link>
-                <Link
+                {/* <Link
                   to="/contact"
                   className="inline-block bg-transparent text-white border-2 border-white px-8 py-3 rounded-lg shadow-lg hover:bg-white/10 transition-all duration-300 font-medium text-lg"
                 >
                   Discover Our Global Impact
-                </Link>
+                </Link> */}
               </motion.div>
             </motion.div>
 
@@ -366,7 +371,7 @@ const Home = () => {
             >
               {/* Pharmaceutical Laboratory Image */}
               <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-[300px] md:h-[300px]">
-                <img src="/images/pioneering_image.jpg" alt="Modern Pharmaceutical Laboratory" className="object-cover w-full h-full" />
+                <img src="/images/home-page-3.jpg" alt="Modern Pharmaceutical Laboratory" className="object-cover w-full h-full" />
               </div>
             </motion.div>
           </div>

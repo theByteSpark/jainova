@@ -289,7 +289,7 @@ const Products = ({ apiProducts }) => {
                   className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-[#E85B2C]/30 transition-all duration-300 cursor-pointer h-full"
                 >
                   <div className="p-6 text-center h-full">
-                    <div style={{height:'55%'}}>
+                    <div style={{height:'52%'}}>
                       <div className="text-5xl mb-4">{category.icon}</div>
                       <h3 className="text-xl font-semibold text-[#1E3A5F] mb-3">{category.title}</h3>
                       <p className="text-[#6B7280] mb-6">{category.description}</p>
@@ -329,7 +329,7 @@ const Products = ({ apiProducts }) => {
       </section>
 
       {/* Certifications & Quality Standards */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <motion.h2
@@ -371,7 +371,7 @@ const Products = ({ apiProducts }) => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Global Distribution */}
       {/* <section className="py-16 bg-[#F9FAFB]">

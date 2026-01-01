@@ -43,7 +43,7 @@ const Footer = () => {
               Innovating Healthcare, Delivering Trust.<br />Your partner in pharmaceutical excellence.
             </p>
             {/* Social Media Links */}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -60,7 +60,7 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           <div>
             <h4 className="text-lg font-semibold text-[#a7f5ee] mb-4">Quick Links</h4>
@@ -110,9 +110,23 @@ const Footer = () => {
               <li className="flex items-center text-[#a7f5ee]">
                 <span className="mr-3">
                   {/* Email / Envelope Icon */}
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8.5l9 6 9-6" />
-                    <path d="M21 8.5V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8.5" />
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Envelope outer shape */}
+                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+
+                    {/* M shape for Gmail */}
+                    <path d="M4 7.5L12 12.5L20 7.5" />
+                    <path d="M4 7.5V17" />
+                    <path d="M20 7.5V17" />
                   </svg>
                 </span>
                 <span>jainova.lifesciences@gmail.com</span>
