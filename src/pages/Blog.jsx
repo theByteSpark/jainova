@@ -6,26 +6,26 @@ import { blogPosts } from '../data/blogPosts';
 const Blog = () => {
   return (
     <div className="pt-20 bg-[#F9FAFB] min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        {/* Page Title */}
-        <div className="text-center mb-16">
-          <motion.h1 
+      {/* Page Title */}
+      <div className="w-full bg-gradient-to-b from-[#1E3A5F] to-white py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4"
+            transition={{ duration: 0.8 }}
           >
-            Our Blog
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-[#5C6B8A] text-lg max-w-2xl mx-auto"
-          >
-            Insights, updates, and expert analysis on pharmaceutical innovations, healthcare trends, and industry developments
-          </motion.p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our Blog
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Insights, updates, and expert analysis on pharmaceutical innovations, healthcare trends, and industry developments
+            </p>
+          </motion.div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-16">
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

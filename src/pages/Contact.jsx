@@ -169,26 +169,21 @@ const Contact = () => {
   return (
     <div className="pt-20 bg-[#F9FAFB] min-h-screen">
       {/* Hero Banner */}
-      <div className="bg-gradient-to-b from-[#1E3A5F]/10 to-[#F9FAFB]">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center max-w-3xl mx-auto">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-4"
-            >
+      <div className="w-full bg-gradient-to-b from-[#1E3A5F] to-white py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Get in Touch
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[#6B7280] text-lg max-w-2xl mx-auto"
-            >
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Have a question or want to learn more about our products? Our global team is here to help. Contact us today to explore opportunities or get more information.
-            </motion.p>
-          </div>
+            </p>
+          </motion.div>
         </div>
       </div>
 

@@ -108,25 +108,27 @@ const Services = () => {
   };
 
   return (
-    <div className="pt-20 bg-[#F9FAFB]">
+    <div className="pt-20 bg-[#F9FAFB] min-h-screen">
+      {/* Hero Banner */}
+      <div className="w-full bg-gradient-to-b from-[#1E3A5F] to-white py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our Products & Services
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Innovative pharmaceutical products and healthcare solutions for better patient outcomes
+            </p>
+          </motion.div>
+        </div>
+      </div>
+      
       <div className="container mx-auto px-4 py-16">
-        <motion.h1 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-4 text-[#1A1A1A]"
-        >
-          Our Products & Services
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center text-[#5C6B8A] mb-12 max-w-2xl mx-auto"
-        >
-          Innovative pharmaceutical products and healthcare solutions for better patient outcomes
-        </motion.p>
-        
         <motion.div 
           variants={containerVariants}
           initial="hidden"

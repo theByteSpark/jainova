@@ -43,6 +43,14 @@ const Footer = () => {
               Innovating Healthcare, Delivering Trust.<br />Your partner in pharmaceutical excellence.
             </p>
             {/* Social Media Links */}
+            <div className="mt-6 flex space-x-4">
+              <a href="https://wa.me/919265147602" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#a7f5ee] transition-colors duration-300">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.122.548 4.195 1.59 6L.004 24l6.115-1.603A11.96 11.96 0 0012.031 24c6.645 0 12.03-5.384 12.03-12.03S18.676 0 12.031 0zm0 21.996c-1.802 0-3.565-.483-5.111-1.4l-.367-.217-3.8.995.996-3.79-.234-.38a9.974 9.974 0 01-1.52-5.174c0-5.503 4.478-9.98 9.98-9.98 5.503 0 9.98 4.477 9.98 9.98s-4.477 9.98-9.98 9.98zm5.474-7.464c-.3-.15-1.774-.876-2.048-.976-.275-.1-.475-.15-.675.15s-.775.976-.95 1.176c-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.415-1.493-.895-.8-1.5-1.79-1.675-2.09-.175-.3-.018-.464.132-.614.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.243-.585-.49-.505-.675-.515-.175-.01-.375-.01-.575-.01s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.115 3.225 5.12 4.525.715.31 1.272.495 1.705.635.715.227 1.365.195 1.88.118.576-.086 1.774-.725 2.024-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+              </a>
+              <a href="https://linkedin.com/company/your-company" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#a7f5ee] transition-colors duration-300">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+              </a>
+            </div>
             {/* <div className="mt-6">
               <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
@@ -140,7 +148,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Jainova Lifesciences. All rights reserved.
           </span>
           <span className="text-[#a7f5ee]">
-            Designed By <a className="text-white underline ml-1" target="_blank" href="https://thebytespark.com/">ByteSpark</a>
+            Crafted by <a className="text-white underline ml-1" target="_blank" href="https://thebytespark.com/">ByteSpark</a>
           </span>
         </div>
       </div>

@@ -41,7 +41,7 @@ const About = () => {
   ];
 
   const strengths = [
-    "<strong>Global Reach:</strong> Exporting to over 9+ countries across AFRICA, ASIA and LATAM",
+    "<strong>Global Reach:</strong> Exporting to over 18+ countries across AFRICA, ASIA and LATAM",
     "<strong>Compliance with International Standards:</strong> Adhering to GMP, WHO, and local regulatory requirements",
     "<strong>Commitment to Quality:</strong> Delivering pharmaceutical products that meet the highest standards",
   ];
@@ -78,14 +78,14 @@ const About = () => {
           <h2 className="text-3xl font-bold text-[#1E3A5F] text-center mb-8">Who Are We</h2>
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <p className="text-[#111827] text-lg leading-relaxed">
-              Founded in 2025, <b>JAINOVA LIFESCIENCES PVT LTD</b> has established itself as a premier pharmaceutical exporter, committed to providing safe, effective, and affordable medicines to markets across 15 regions. Our global presence spans 9+ countries, and we pride ourselves on our compliance with international regulatory standards and our dedication to improving global healthcare.
+              Founded in 2025, <b>JAINOVA LIFESCIENCES PVT LTD</b> has established itself as a premier pharmaceutical exporter, committed to providing safe, effective, and affordable medicines to markets across 15 regions. Our global presence spans 18+ countries, and we pride ourselves on our compliance with international regulatory standards and our dedication to improving global healthcare.
             </p>
           </div>
         </motion.div>
 
         {/* Mission & Vision Section */}
         <motion.div
-          className="mb-20"
+          className="mb-20 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -138,14 +138,14 @@ const About = () => {
 
         {/* Leadership Section */}
         <motion.div
-          className="mb-20"
+          className="mb-20 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <h2 className="text-3xl font-bold text-[#1E3A5F] text-center mb-12">Our Leadership</h2>
           <div className="flex justify-center">
-            <div className="w-full md:w-2/3 lg:w-1/2">
+            <div className="w-full">
               {leadershipTeam.map((leader, index) => (
                 <div key={index} className="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-lg">
                   <div className="w-full">
