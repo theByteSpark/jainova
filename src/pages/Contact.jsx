@@ -340,7 +340,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-[#1E3A5F] mb-6">Our Location</h2>
               <div className="rounded-lg overflow-hidden h-[400px] shadow-sm border border-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.70717844116!2d72.4396558968064!3d23.02037455483408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1691135315899!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=43%2C+Parthbhumi%2C+near+Government+tubewell%2C+Bopal%2C+Ahmedabad%2C+Daskroi%2C+Gujarat%2C+India%2C+380058&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
