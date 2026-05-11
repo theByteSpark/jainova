@@ -58,7 +58,19 @@ const Home = () => {
     { name: "Good Manufacturing Practice (GMP)", icon: "✅" },
     { name: "WHO Guidelines Compliance", icon: "🌍" },
     { name: "ISO 9001:2015", icon: "🏅" },
-    { name: "FDA Approved Facilities", icon: "🔐" }
+    { name: "FDA Approved Facilities", icon: "🔐" },
+    {
+      name: "CE Certification",
+      icon: (
+        <img src="/images/ce-logo.webp" alt="CE Certification" className="w-16 h-16 object-contain" />
+      )
+    },
+    {
+      name: "FSSAI Registration",
+      icon: (
+        <img src="/images/fssai-logo.webp" alt="FSSAI Registration" className="w-16 h-16 object-contain" />
+      )
+    }
   ];
 
   // Core Values data
@@ -89,19 +101,7 @@ const Home = () => {
   const achievementItems = [
     { name: "Countries", icon: "18+" },
     { name: "Happy Customers", icon: "27+" },
-    { name: "Product Portfolio", icon: "300+" },
-    {
-      name: "CE Certification",
-      icon: (
-        <img src="/images/ce-logo.webp" alt="CE Certification" className="w-16 h-16 object-contain" />
-      )
-    },
-    {
-      name: "FSSAI Registration",
-      icon: (
-        <img src="/images/fssai-logo.webp" alt="FSSAI Registration" className="w-20 h-20 object-contain" />
-      )
-    }
+    { name: "Product Portfolio", icon: "300+" }
   ];
 
   // Achievements data for Why Choose Us section
@@ -162,13 +162,7 @@ const Home = () => {
   // State for hero slider
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
-  // Auto rotate hero slides
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHeroSlide((prev) => (prev === 1 ? 0 : prev + 1));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+
 
   // Auto rotate testimonials
   useEffect(() => {
@@ -196,37 +190,7 @@ const Home = () => {
             />
           </div>
 
-          <div className={`absolute inset-0 transition-opacity duration-1000 ${currentHeroSlide === 1 ? 'opacity-100' : 'opacity-0'}`}>
-            <img
-              src="/images/map.jpeg"
-              alt="Global Presence Map"
-              className="w-full h-full object-contain object-center"
-            />
-          </div>
 
-          {/* Slider Controls */}
-          <div className="absolute inset-y-0 left-0 z-30 flex items-center pl-4 md:pl-8">
-            <button
-              onClick={(e) => { e.preventDefault(); e.stopPropagation(); setCurrentHeroSlide(currentHeroSlide === 0 ? 1 : 0); }}
-              className="bg-white/20 hover:bg-white/40 text-black rounded-full p-2 backdrop-blur-sm transition-all shadow-lg cursor-pointer"
-            >
-              <ChevronLeft size={32} />
-            </button>
-          </div>
-          <div className="absolute inset-y-0 right-0 z-30 flex items-center pr-4 md:pr-8">
-            <button
-              onClick={(e) => { e.preventDefault(); e.stopPropagation(); setCurrentHeroSlide(currentHeroSlide === 0 ? 1 : 0); }}
-              className="bg-white/20 hover:bg-white/40 text-black rounded-full p-2 backdrop-blur-sm transition-all shadow-lg cursor-pointer"
-            >
-              <ChevronRight size={32} />
-            </button>
-          </div>
-
-          {/* Slider Indicators */}
-          <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center space-x-3 pointer-events-none">
-            <button onClick={() => setCurrentHeroSlide(0)} className={`pointer-events-auto w-3 h-3 rounded-full transition-all duration-300 ${currentHeroSlide === 0 ? 'bg-[#E85B2C] w-8' : 'bg-white/50 hover:bg-white'}`}></button>
-            <button onClick={() => setCurrentHeroSlide(1)} className={`pointer-events-auto w-3 h-3 rounded-full transition-all duration-300 ${currentHeroSlide === 1 ? 'bg-[#E85B2C] w-8' : 'bg-white/50 hover:bg-white'}`}></button>
-          </div>
         </div>
 
         <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
@@ -470,7 +434,7 @@ const Home = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto"
+            className="flex flex-wrap justify-center gap-4 md:gap-6"
           >
             {achievementItems.map((item, index) => (
               <motion.div
@@ -479,12 +443,12 @@ const Home = () => {
                   hidden: { y: 20, opacity: 0 },
                   visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
                 }}
-                className="flex flex-col items-center p-6 bg-white rounded-lg text-center shadow-lg transition-transform hover:scale-105 h-full min-h-[220px]"
+                className="flex flex-col items-center p-6 bg-white rounded-lg text-center shadow-lg transition-transform hover:scale-105 w-48 h-56"
               >
                 <div className="flex items-center justify-center h-24 w-full mb-4">
                   <span className="text-5xl text-[#1E3A5F] font-bold">{item.icon}</span>
                 </div>
-                <div className="flex items-start justify-center w-full">
+                <div className="flex items-center justify-center w-full flex-1">
                   <span className="text-[#1E3A5F] font-bold text-base md:text-lg leading-tight">{item.name}</span>
                 </div>
               </motion.div>
@@ -571,6 +535,47 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Global Presence Map Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <motion.h2
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold text-[#1E3A5F] mb-4"
+            >
+              Our Global Presence
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-[#6B7280] max-w-2xl mx-auto"
+            >
+              Serving pharmaceutical needs across multiple countries and regions worldwide.
+            </motion.p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/map.jpeg"
+                alt="Global Presence Map"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -661,8 +666,14 @@ const Home = () => {
                 }}
                 className="flex flex-col items-center p-6 bg-white rounded-lg w-48 h-48 justify-center text-center shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <span className="text-4xl mb-3">{cert.icon}</span>
-                <span className="text-[#1E3A5F] font-medium">{cert.name}</span>
+                <div className="mb-3 flex items-center justify-center h-16">
+                  {typeof cert.icon === 'string' ? (
+                    <span className="text-4xl">{cert.icon}</span>
+                  ) : (
+                    cert.icon
+                  )}
+                </div>
+                <span className="text-[#1E3A5F] font-medium text-sm">{cert.name}</span>
               </motion.div>
             ))}
           </motion.div>
